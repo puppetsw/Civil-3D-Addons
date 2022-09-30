@@ -42,8 +42,8 @@ public static class Commands
         cogoPoints = new List<CogoPoint>(cogoPoints.OrderBy(x => x.PointNumber));
 
         // Create Poly/3Dpoly that joins the points
-        var pointList = cogoPoints.Select(cogoPoint => new Point3d(cogoPoint.Easting, cogoPoint.Northing, cogoPoint.Elevation)).ToList();
-        var point3dCollection = new Point3dCollection(pointList.ToArray());
+        var pointList = cogoPoints.Select(cogoPoint => new Point3d(cogoPoint.Easting, cogoPoint.Northing, cogoPoint.Elevation)).ToArray();
+        var point3dCollection = new Point3dCollection(pointList);
 
         var poly3d = new Polyline3d(Poly3dType.SimplePoly, point3dCollection, false);
 
