@@ -13,7 +13,7 @@ namespace AverageCogo;
 public static class Commands
 {
     [CommandMethod("WMS", "_AverageCogo", CommandFlags.Modal)]
-    public static void StringCogoPoints()
+    public static void AverageCogoCommand()
     {
         var entityType = RXObject.GetClass(typeof(CogoPoint));
         var typedValues = new TypedValue[] { new((int)DxfCode.Start, entityType.DxfName) };
